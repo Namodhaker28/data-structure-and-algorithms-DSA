@@ -15,7 +15,7 @@ struct node
     }
 };
 
-void RightView(node *root)
+void leftView(node *root)
 {
     if (root == NULL)
         return;
@@ -32,7 +32,7 @@ void RightView(node *root)
             node *nod = q.front();
             q.pop();
 
-            if (i == n - 1)
+            if (i == 0)
                 cout << nod->data << " ";
 
             if (nod->left)
@@ -53,6 +53,6 @@ int main()
     root->right->left = new node(6);
     root->right->right = new node(7);
 
-    RightView(root);
+    leftView(root);
     return 0;
 }
